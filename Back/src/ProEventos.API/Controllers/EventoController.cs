@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using ProEventos.API.Data;
 using ProEventos.API.Models;
 
 namespace ProEventos.API.Controllers
@@ -7,42 +8,25 @@ namespace ProEventos.API.Controllers
     [Route("api/[controller]")]
     public class EventoController : ControllerBase
     {
-        public IEnumerable<Evento> _evento = new Evento[] {
-            new Evento() {
-                Id = 1,
-                Tema = "Angular e .Net Core",
-                Local = "BH",
-                Lote = "1 Lote",
-                QtdPessoas = 250,
-                DataEvento = DateTime.Now.AddDays(2).ToString("dd/MM/yyyy"),
-                ImagemUrl = "foto.png"
-            },
-            new Evento() {
-                Id = 2,
-                Tema = "Angular e .Net Core 7",
-                Local = "SP",
-                Lote = "4 Lote",
-                QtdPessoas = 250,
-                DataEvento = DateTime.Now.AddDays(2).ToString("dd/MM/yyyy"),
-                ImagemUrl = "foto2.png"
-            }
+        public DataContext Context { get; }
 
-        };
-
-        public EventoController() { }
+        public EventoController(DataContext context) {
+            this.Context = context;
+            
+         }
 
         [HttpGet]
         public IEnumerable<Evento> Get()
         {
-            return _evento;
+            return Context.Eventos;
         }
 
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            var evento = _evento.FirstOrDefault(e => e.Id == id);
-            if(evento == null) return BadRequest("Id Não Encontrado");
-            return Ok(evento) ;
+            var evento = Context.Eventos.FirstOrDefault(e => e.Id == id);
+            if (evento == null) return BadRequest("Id Não Encontrado");
+            return Ok(evento);
         }
     }
 }
