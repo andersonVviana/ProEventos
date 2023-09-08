@@ -522,3 +522,4 @@ testem.log
 .DS_Store
 Thumbs.db
 
+/Front/ProEventos-App/.vscode
