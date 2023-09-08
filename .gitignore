@@ -523,3 +523,5 @@ testem.log
 Thumbs.db
 
 /Front/ProEventos-App/.vscode
+/Front/ProEventos-App/node_modules
+/Front/ProEventos-App/.angular/cache
