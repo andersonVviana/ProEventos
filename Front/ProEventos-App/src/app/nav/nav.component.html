@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #522583;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand-center ms-3" href="#">
+      <img src="/assets/logo.png" width="60" height="60" alt="">
+    </a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link ms-3" style="color: white;" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: white;" href="#">Departamentos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: white;" href="#">Área TI</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: white;" href="#">Cardápio da Semana</a>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="btn-group" dropdown>
+    <button id="button-animated"dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+      aria-controls="dropdown-animated" style="background-color: transparent; border: none;">
+      <img class="rounded-circle" alt="avatar1" src="assets/andy.jpg" width="50" height="50" />
+      Anderson Vallada Viana <span class="caret"></span>
+    </button>
+    <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu dropdown-menu-right text-center" role="menu" aria-labelledby="button-animated">
+      <li role="menuitem"><a class="dropdown-item" href="#">Minha Conta</a></li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Administração</a>
+      </li>
+      <li role="menuitem"><a class="dropdown-item" href="#">Logout</a></li>
+    </ul>
+  </div>
+    
+</nav>
