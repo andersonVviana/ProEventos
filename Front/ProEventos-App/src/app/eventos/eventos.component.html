@@ -1,7 +1,29 @@
-<h1>Eventos</h1>
+<h1>Inventário de Equipamentos</h1>
+<hr>
 
-<div *ngFor="let evento of eventos">
-  <p><b>Tema:</b>{{ evento.tema }}</p>
-  <p><b>Local:</b>{{ evento.local }}</p>
-  <hr>
-</div>
+<form action="" class="form-inline">
+  <div class="form-group mb-2">
+    <input type="text" class="form-control mr-2" placeholder="buscar por Hostname, Ativo ou S/N" style="width: 300px; margin-top: 50px; margin-bottom: 30px;">
+  </div>
+</form>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Hostname</th>
+      <th scope="col">Usuário Logado</th>
+      <th scope="col">Marca</th>
+      <th scope="col">Modelo</th>
+      <th scope="col">S/N</th>
+      <th scope="col">Sistema Operacional</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Donuts</th>
+    </tr>
+    <tr>
+      <th scope="row">Stationery</th>
+    </tr>
+  </tbody>
+</table>

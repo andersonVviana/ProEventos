@@ -11,15 +11,34 @@
       <li class="nav-item active">
         <a class="nav-link ms-3" style="color: white;" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
+      <div class="btn-group" dropdown>
+        <button id="button-animated"dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+          aria-controls="dropdown-animated" style="background-color: transparent; border: none;">
+          Inventário de Equipamentos <span class="caret"></span>
+        </button>
+        <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu dropdown-menu-right text-center" role="menu" aria-labelledby="button-animated">
+          <li role="menuitem"><a class="dropdown-item" href="#">Desktops e Notebooks</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Impressoras</a>
+          </li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Ativos Diversos</a></li>
+        </ul>
+      </div>
       <li class="nav-item">
-        <a class="nav-link" style="color: white;" href="#">Departamentos</a>
+        <a class="nav-link" style="color: white;" href="#">Gerenciamento de Equipamentos</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" style="color: white;" href="#">Área TI</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" style="color: white;" href="#">Cardápio da Semana</a>
-      </li>
+      <div class="btn-group" dropdown>
+        <button id="button-animated"dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+          aria-controls="dropdown-animated" style="background-color: transparent; border: none;">
+          Administração <span class="caret"></span>
+        </button>
+        <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu dropdown-menu-right text-center" role="menu" aria-labelledby="button-animated">
+          <li role="menuitem"><a class="dropdown-item" href="#">Contratos</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Materias de TI</a>
+          </li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Controle de Fornecedores</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">FAQ TI</a></li>
+        </ul>
+      </div>
     </ul>
   </div>
   
